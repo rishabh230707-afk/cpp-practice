@@ -5,9 +5,9 @@
 - [x] Every Unit I–IV mechanism mapped in REQUIREMENTS.md.
 - [x] Functional and failure-path tests included.
 - [x] Project report, viva guide, build instructions and actual example output included.
-- [x] Individual author identified as Rishabh Bansal; no unconfirmed partner.
-- [ ] Run on your own Mac and rehearse the demo and viva.
-- [ ] Enter any required enrollment/section details in the college form.
+- [x] Developed by Rishabh Bansal as an individual project.
+- [ ] Run on macOS and rehearse the demo and viva.
+- [ ] Complete the enrollment and section fields in the college form.
 - [ ] Upload the ZIP and supply the GitHub project URL as the form requires.
 
 Deadline supplied by the assignment: **27 November 2026, 11:59 PM**.
