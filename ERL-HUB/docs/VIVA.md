@@ -50,5 +50,3 @@
 **Is the save fully crash-proof?** Atomic rename prevents readers seeing a partially replaced file on supported filesystems. Standard C++ does not guarantee durable storage after power loss, so the project does not claim that.
 
 **Are pending missions saved?** No. Stock and completed dispatch audit manifests are saved; the pending queue is session-only. Explain this distinction clearly.
-
-**Why not add AI or live maps?** They are not needed for the stated OOP requirements. This project keeps its core behavior deterministic and explainable.

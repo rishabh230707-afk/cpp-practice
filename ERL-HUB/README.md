@@ -4,11 +4,13 @@
 CIC-211 Object-Oriented Programming project · C++17 · MAIT, Delhi  
 Developed by Rishabh Bansal · Individual submission
 
-ERL-HUB coordinates relief stock, heterogeneous vehicles and priority missions after a simulated earthquake. It demonstrates all four units of the supplied CIC-211 project specification through executable behavior and tests.
+ERL-HUB is my C++ project for CIC-211. It manages relief supplies and dispatches trucks, helicopters, rescue drones and boats in a simulated earthquake response. The main idea is simple: send urgent supplies first, check whether a vehicle can complete the route, and keep a record of every successful dispatch.
+
+The project brings together the OOP topics from all four units. The [requirement checklist](docs/REQUIREMENTS.md) shows where each topic is used.
 
 ## Build and run
 
-No third-party C++ libraries are needed. Use a C++17 compiler (GCC 9+ or a recent Apple Clang) and Make.
+The program uses only the C++ standard library. Build it with a C++17 compiler (GCC 9+ or a recent Apple Clang) and Make.
 
 ```sh
 make
@@ -22,7 +24,7 @@ c++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude src/inventory.cpp src/logistic
 ./erl-hub
 ```
 
-Run the reproducible demonstration with a **new data filename**:
+For a quick demonstration, use a **new data filename**:
 
 ```sh
 ./build/erl-hub --demo --data demo.bin
@@ -55,12 +57,12 @@ The regression suite covers deep copies, stream parsing, polymorphism, diamond i
 ## Documentation
 
 - [Project report and design](docs/PROJECT_REPORT.md)
-- [Every specification requirement mapped to code](docs/REQUIREMENTS.md)
+- [Syllabus checklist with code references](docs/REQUIREMENTS.md)
 - [Viva questions and demonstration script](docs/VIVA.md)
 - [Test results and limitations](docs/TEST_REPORT.md)
 - [Actual demonstration output](examples/demo-output.txt)
 
-## Scope and persistence guarantees
+## Limitations
 
 This is a single-process educational simulation, using local Cartesian kilometres and synthetic fuel costs; it does not connect to real emergency services. The binary file contains a version header, little-endian length and checksum followed by a length-delimited, precisely serialized payload. It never dumps object pointers or compiler-dependent class layouts.
 
@@ -70,4 +72,4 @@ Use one running hub per data file. Pending queues and commander preference are s
 
 ## Submission
 
-The source archive includes all code, tests, documentation and example output; build products and live data are excluded. Deadline provided in the assignment: **27 November 2026, 11:59 PM**. Submit through the supplied [Google Form](https://forms.gle/cgWY4vZ3Siep8mmF9), and provide the final GitHub repository as required. 
+The source archive includes all code, tests, documentation and example output; build products and live data are excluded. Submission deadline: **27 November 2026, 11:59 PM**. Submit through the supplied [Google Form](https://forms.gle/cgWY4vZ3Siep8mmF9), and include the GitHub project link.

@@ -3,6 +3,8 @@
 **Course:** CIC-211 — Object-Oriented Programming  
 **Institution:** Maharaja Agrasen Institute of Technology, Department of Computer Science and Engineering  
 **Developed by:** Rishabh Bansal  
+**Programme:** B.Tech, Computer Science and Engineering  
+**Year:** Second year  
 **Language:** Standard C++17  
 **Project option:** 2 (ERL-HUB)
 
@@ -10,7 +12,9 @@
 
 After an earthquake, relief coordinators must allocate limited supplies while selecting transport appropriate to damaged infrastructure. A ground truck cannot cross a destroyed road, a helicopter requires safe weather, and a boat requires an open water corridor. Priority medical requests should precede routine deliveries. Departures must leave a reliable record of the agency, cargo, destination and fuel used.
 
-ERL-HUB models these concerns in a console application. Its objectives are validated inventory operations, polymorphic route evaluation, medical priority dispatch, safe dynamic manifests and atomic persistence. It is a software simulation rather than a production emergency-response platform.
+The aim of this project is to handle these tasks in one console application. A coordinator can add supplies, prepare a mission, choose a vehicle and dispatch it according to urgency. Before departure, the program checks the stock, vehicle capacity, route and fuel. A successful dispatch is saved so it can be viewed after restarting the program.
+
+This problem gives each OOP concept a practical use. Different vehicles share a common interface, cargo is stored in a dynamically allocated manifest, and exceptions handle cases such as a blocked road or insufficient fuel. The routes and emergency scenarios are simulated.
 
 ## 2. Modules and responsibilities
 
@@ -42,11 +46,11 @@ ReliefHub owns vehicles using unique_ptr. Its base-pointer view is non-owning an
 
 ## 4. Allocation and prioritization
 
-The volume overload allocates `min(stock units, floor(volume budget / unit volume))` units. The triage overload allocates one medicine kit per patient for priorities 1–3 and two per patient for priorities 4–5. These are explicit educational policy assumptions. Each allocation rejects nonpositive requests and duplicates. Vehicle mass and volume limits are checked before dispatch.
+The volume overload allocates `min(stock units, floor(volume budget / unit volume))` units. The triage overload allocates one medicine kit per patient for priorities 1–3 and two per patient for priorities 4–5. These quantities are rules chosen for the demonstration, not medical recommendations. Each allocation rejects nonpositive requests and duplicates. Vehicle mass and volume limits are checked before dispatch.
 
 Mission urgency ranges from 1 to 5, with 5 highest. The UrgentMedicalFirst functor sorts descending priority and ascending mission ID. IncidentCommander may elevate a medical-capable vehicle's triage priority through friend access, but cannot bypass route, fuel, payload or stock checks. Changing a priority does not automatically change the already-created cargo request.
 
-The queue uses a sorted vector for inspectable code: insertion costs O(n log n), top O(1) and removal O(n). For much larger deployments, a heap could improve push/pop performance. Depot SKU lookup is average O(1); deterministic inventory display costs O(s log s). Manifest duplicate checks are O(m), and order-independent identity comparison is O(m²), suitable for small manifests.
+The queue uses a sorted vector to keep the implementation easy to follow: insertion costs O(n log n), top O(1) and removal O(n). For much larger deployments, a heap could improve push/pop performance. Depot SKU lookup is average O(1); deterministic inventory display costs O(s log s). Manifest duplicate checks are O(m), and order-independent identity comparison is O(m²), suitable for small manifests.
 
 ## 5. Dispatch algorithm
 
@@ -83,8 +87,12 @@ All domain exceptions derive transitively from std::exception and own the diagno
 
 ## 8. Validation and outcome
 
-See TEST_REPORT.md for commands, observed results and the memory-check limitation. Tests exercise both ordinary operations and failure cases, especially preservation of disk and memory state after injected write failure. The demonstration proves that a high-priority medical mission is dispatched before a lower-priority ration mission and that the hybrid takes water when the road is blocked.
+See TEST_REPORT.md for commands, observed results and the memory-check limitation. Tests exercise both ordinary operations and failure cases, especially preservation of disk and memory state after injected write failure. The sample run shows that a high-priority medical mission is dispatched before a lower-priority ration mission and that the hybrid takes water when the road is blocked.
 
-## 9. Boundaries and future work
+## 9. Limitations and future improvements
 
-The system assumes one hub process per file and synthetic, one-way fuel use. Missions complete immediately. It does not model travel time, return trips, crew shifts, real map graphs, medical diagnoses, authentication or real NDRF integration. A future version could add a graph-based routing engine, persistent pending queue, event-sourced restocking/refuelling, authenticated agency roles and a database with durable concurrent transactions. These features are not presented as implemented.
+The system assumes one hub process per file and synthetic, one-way fuel use. Missions complete immediately. It does not model travel time, return trips, crew shifts, real map graphs, medical diagnoses, authentication or real NDRF integration. A future version could add a graph-based routing engine, persistent pending queue, event-sourced restocking/refuelling, authenticated agency roles and a database with durable concurrent transactions. These are possible extensions to the current version.
+
+## 10. Conclusion
+
+ERL-HUB connects the main OOP concepts to a single working application. The vehicle hierarchy demonstrates runtime polymorphism, the manifest handles dynamic memory, and the dispatch process combines inventory checks with file handling and exceptions. The most useful part of the design is that a failed dispatch leaves the stock, fuel and saved records unchanged. The current version covers the course requirements while keeping the program small enough to explain and demonstrate in the viva.

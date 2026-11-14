@@ -1,6 +1,6 @@
-# CIC-211 requirement traceability
+# CIC-211 syllabus checklist
 
-This matrix follows Option 2 of the supplied assignment, not Option 1.
+This checklist links each requirement of Option 2 (ERL-HUB) to its implementation.
 
 | Unit | Required mechanism | Implementation and observable evidence |
 |---|---|---|
