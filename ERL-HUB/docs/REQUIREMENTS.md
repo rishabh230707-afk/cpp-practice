@@ -32,7 +32,7 @@ This matrix follows Option 2 of the supplied assignment, not Option 1.
 | IV | Standard algorithms | sort produces deterministic inventory order; stable_sort orders missions; for_each displays base-pointer fleet; find detects duplicate saved IDs. |
 | IV | User-defined I/O manipulator | `manifestHeader(ostream&)`, used as `out << manifestHeader`; `printManifest` uses iomanip widths/precision and restores formatting flags. |
 | General | Modular standard C++ | Three domain headers, three implementation modules and one CLI; C++17, standard library only; strict warning build. |
-| General | Team size at most two | Prepared as an individual project for Rishabh Bansal; no unconfirmed teammate listed. |
+| General | Team size at most two | Individual project by Rishabh Bansal. |
 
 ## Requirement terminology
 
