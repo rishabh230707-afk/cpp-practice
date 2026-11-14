@@ -2,7 +2,7 @@
 
 **Post-Earthquake Multi-Agency Emergency Relief Logistics Hub**  
 CIC-211 Object-Oriented Programming project · C++17 · MAIT, Delhi  
-Prepared for Rishabh Bansal · Individual submission
+Developed by Rishabh Bansal · Individual submission
 
 ERL-HUB coordinates relief stock, heterogeneous vehicles and priority missions after a simulated earthquake. It demonstrates all four units of the supplied CIC-211 project specification through executable behavior and tests.
 
@@ -70,4 +70,4 @@ Use one running hub per data file. Pending queues and commander preference are s
 
 ## Submission
 
-The source archive includes all code, tests, documentation and example output; build products and live data are excluded. Deadline provided in the assignment: **27 November 2026, 11:59 PM**. Submit through the supplied [Google Form](https://forms.gle/cgWY4vZ3Siep8mmF9), and provide the final GitHub repository as required. Review your college's submission fields and authorship rules before submission.
+The source archive includes all code, tests, documentation and example output; build products and live data are excluded. Deadline provided in the assignment: **27 November 2026, 11:59 PM**. Submit through the supplied [Google Form](https://forms.gle/cgWY4vZ3Siep8mmF9), and provide the final GitHub repository as required. 
