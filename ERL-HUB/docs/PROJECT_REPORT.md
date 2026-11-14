@@ -2,7 +2,7 @@
 
 **Course:** CIC-211 — Object-Oriented Programming  
 **Institution:** Maharaja Agrasen Institute of Technology, Department of Computer Science and Engineering  
-**Prepared for:** Rishabh Bansal  
+**Developed by:** Rishabh Bansal  
 **Language:** Standard C++17  
 **Project option:** 2 (ERL-HUB)
 
