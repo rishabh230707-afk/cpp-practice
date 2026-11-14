@@ -1,0 +1,41 @@
+
+ERL-HUB | Earthquake Relief Logistics
+1 Inventory  2 Fleet  3 Restock  4 Queue mission
+5 Dispatch next  6 Audit log  7 Seed supplies  8 Statistics  0 Exit
+Choice: SKU                    UNITS       KG       M3
+-----------------------------------------------
+"blanket" 500 1 0.0080000000000000002
+"medicine" 480 0.5 0.002
+"ration" 950 2 0.01
+"water" 200 20 0.025000000000000001
+
+ERL-HUB | Earthquake Relief Logistics
+1 Inventory  2 Fleet  3 Restock  4 Queue mission
+5 Dispatch next  6 Audit log  7 Seed supplies  8 Statistics  0 Exit
+Choice: TRUCK-1 | Ground convoy | fuel 298.25 | payload 5000 kg
+HELI-1 | Medical helicopter | fuel 500 | payload 1500 kg
+DRONE-1 | Rescue quadcopter | fuel 20 | payload 10 kg
+BOAT-1 | Amphibious boat | fuel 200 | payload 2000 kg
+HYBRID-1 | Amphibious medical unit | fuel 241.515 | payload 2500 kg
+
+ERL-HUB | Earthquake Relief Logistics
+1 Inventory  2 Fleet  3 Restock  4 Queue mission
+5 Dispatch next  6 Audit log  7 Seed supplies  8 Statistics  0 Exit
+Choice: Mission 1 | Emergency medical team | HYBRID-1 | fuel 8.48528
+SKU                    UNITS       KG       M3
+-----------------------------------------------
+medicine                  20    10.00     0.04
+Mission 2 | NDRF | TRUCK-1 | fuel 1.75
+SKU                    UNITS       KG       M3
+-----------------------------------------------
+ration                    50   100.00     0.50
+
+ERL-HUB | Earthquake Relief Logistics
+1 Inventory  2 Fleet  3 Restock  4 Queue mission
+5 Dispatch next  6 Audit log  7 Seed supplies  8 Statistics  0 Exit
+Choice: Operational vehicles: 5 | dispatched tonnes: 0.11 | queued: 0
+
+ERL-HUB | Earthquake Relief Logistics
+1 Inventory  2 Fleet  3 Restock  4 Queue mission
+5 Dispatch next  6 Audit log  7 Seed supplies  8 Statistics  0 Exit
+Choice: 

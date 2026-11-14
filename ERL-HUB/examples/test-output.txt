@@ -1,0 +1,51 @@
+make: Entering directory 'ERL-HUB'
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2 src/inventory.cpp src/logistics.cpp src/hub.cpp src/main.cpp -o build/erl-hub
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2 src/inventory.cpp src/logistics.cpp src/hub.cpp tests/tests.cpp -o build/tests
+./build/tests
+PASS deep copy survives independent growth
+PASS copy assignment and self assignment
+PASS move and copy moved-from manifest
+PASS duplicate SKU rejected
+PASS manifest bounds
+PASS stream manifest round trip
+PASS malformed extraction preserves destination
+PASS cargo serialization preserves floating point precision
+PASS stock return by reference
+PASS restock and deduct operators
+PASS insufficient inventory rejected
+PASS conflicting SKU dimensions rejected
+PASS volume allocation and reference return
+PASS medical allocation overload
+PASS invalid triage rejected
+PASS nonfinite weight rejected
+PASS static vehicle count including diamond
+PASS virtual inheritance creates one shared base
+PASS hybrid dynamic dispatch selects water
+PASS blocked ground corridor
+PASS unsafe aerial weather
+PASS hybrid both corridors blocked
+PASS payload overweight exception
+PASS fuel depletion exception
+PASS friend commander accesses private triage state
+PASS nonmedical drone override rejected
+PASS virtual destructors release entire fleet
+PASS priority queue tie by mission ID
+PASS urgent medical mission before routine
+PASS empty queue guarded
+PASS generic queue supports another type
+PASS injected failure before commit
+PASS failed transaction preserves disk inventory fuel and audit
+PASS restock rollback
+PASS restock rollback preserves memory
+PASS successful dispatch deducts stock and logs manifest
+PASS fuel and tonnage analytics
+PASS duplicate mission ID prevented
+PASS multi-item stock shortage
+PASS no partial multi-item deduction
+PASS restart restores stock logs and manifests
+PASS restart replays vehicle fuel and position
+PASS checksum corruption detected
+PASS truncated binary header detected
+PASS unwritable destination reported
+All 45 checks passed.
+make: Leaving directory 'ERL-HUB'
